@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pyConfObj"
-version = "0.1.2"
+version = "0.1.4"
 authors = [
   { name="Otger Ballester", email="otger@ifae.es" },
 ]
@@ -20,3 +20,12 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/otger/pyConfObject"
 "Bug Tracker" = "https://github.com/otger/pyConfObject/issues"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = [
+    "src",
+    "tests"
+]

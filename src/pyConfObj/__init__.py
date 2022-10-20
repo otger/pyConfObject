@@ -1,1 +1,1 @@
-from .config import ConfObj
+from .config import ConfObj, ConfObjList
