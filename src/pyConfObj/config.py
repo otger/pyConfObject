@@ -6,7 +6,7 @@ __copyright__ = 'Copyright 2022'
 __date__ = '18/10/22'
 __credits__ = ['Otger Ballester', ]
 __license__ = 'MIT License'
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 __maintainer__ = 'Otger Ballester'
 __email__ = 'otger@ifae.es'
 
@@ -57,6 +57,9 @@ class ConfObj:
     def as_json(self):
         return json.dumps(self.dump(), indent=2)
 
+    def as_yaml(self):
+        return yaml.dump(self.dump(), indent=2, encoding="utf-8")
+
     def load_json(self, json_path):
         with open(json_path, 'r') as json_file:
             self._loaded = json.load(json_file)
@@ -73,7 +76,7 @@ class ConfObj:
 
     def save_as_yaml(self, yaml_path):
         with open(yaml_path, 'w') as yaml_fp:
-            yaml.dump(self.dump(), yaml_fp, indent=2)
+            yaml.dump(self.dump(), yaml_fp, indent=2, encoding="utf-8")
 
     def check_pass(self) -> bool:
         """

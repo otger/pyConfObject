@@ -18,6 +18,8 @@ json_a = """{
   "atr_int": 3,
   "atr_str": "Whatever"
 }"""
+yaml_a = b'atr_int: 3\natr_str: Whatever\n'
+
 
 class B(ConfObj):
     atr_a = A()

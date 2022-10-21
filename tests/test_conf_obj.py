@@ -24,3 +24,9 @@ def test_asjson():
     a0 = A()
     a0.load_dump(dump_a)
     assert json_a == a0.as_json()
+
+
+def test_asyaml():
+    a0 = A()
+    a0.load_dump(dump_a)
+    assert yaml_a == a0.as_yaml()
